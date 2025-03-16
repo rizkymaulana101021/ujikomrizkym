@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "sidebar content"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto auto 1fr auto;
+            gap: 10px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #2297a7;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #ddd;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+
+        main {
+            grid-area: content;
+            padding: 10px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Warung Jabar</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <h2>Sidebar</h2>
+        <p>Links or additional content can go here.</p>
+    </aside>
+    <main>
+        <h2>Main Content</h2>
+        <p>This is the main content area.</p>
+    </main>
+    <footer>
+        <p>Website Footer &copy; 2023</p>
+    </footer>
+</body>
+
+</html>
